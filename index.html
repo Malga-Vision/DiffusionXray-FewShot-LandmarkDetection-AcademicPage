@@ -4,23 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="This study introduces a novel self-supervised pre-training approach using diffusion models for landmark detection in X-ray images, significantly outperforming existing methods across three datasets with minimal annotated data (1-50 images).">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="Landmark detection, Diffusion models, DDPM, Self-supervised Learning, Few-shot Learning, X-rays">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -52,7 +38,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Self-supervised pre-training with diffusion model for few-shot landmark
+            <h1 class="title is-1 publication-title" style="font-size: 40px;">
+              Self-supervised pre-training with diffusion model <br>for few-shot landmark
               detection in x-ray images</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -152,17 +139,16 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Deep neural networks have been extensively applied in the medical domain for various tasks, including
-            image classification, segmentation, and landmark detection. However, their application is often
-            hindered by data scarcity, both in terms of available annotations and images. This study introduces
+            <b>Deep neural networks</b> have been extensively applied in the medical domain for various tasks, <b>including</b> image classification, segmentation, and <b>landmark detection</b>. However, their application is often
+            <b>hindered by data scarcity</b>, both in terms of available annotations and images. This study introduces
             a novel application of denoising diffusion probabilistic models (DDPMs) to landmark detection
             task, specifically addressing the challenge of limited annotated data in x-ray imaging. Our key
             innovation lies in leveraging DDPMs for self-supervised pre-training in landmark detection, a
-            previously unexplored approach in this domain. This method enables accurate landmark detection
-            with minimal annotated training data (as few as 50 images), surpassing both ImageNet supervised
+            previously unexplored approach in this domain. <b>This method enables accurate landmark detection
+            with minimal annotated training data</b> (as few as 50 images), surpassing both ImageNet supervised
             pre-training and traditional self-supervised techniques across three popular x-ray benchmark datasets.
-            To our knowledge, this work represents the first application of diffusion models for self-supervised
-            learning in landmark detection, which may offer a valuable pre-training approach in few-shot regimes,
+            To our knowledge, <b>this work represents the first application of diffusion models for self-supervised
+            learning in landmark detection</b>, which may offer a valuable pre-training approach in few-shot regimes,
             for mitigating data scarcity
           </p>
         </div>
@@ -174,33 +160,21 @@
 
 
 <!-- Introduction + Pipeline-->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-left">Introduction</h2>
-      <div class="columns">
-        <div class="column is-four-fifths">
-          <div class="content has-text-left">
+<section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Introduction</h2>
+          <div class="content has-text-justified">
             <p>
-              Deep neural networks have been extensively applied in the medical domain for various tasks, including
-              image classification, segmentation, and landmark detection. However, their application is often
-              hindered by data scarcity, both in terms of available annotations and images. This study introduces
-              a novel application of denoising diffusion probabilistic models (DDPMs) to landmark detection
-              task, specifically addressing the challenge of limited annotated data in x-ray imaging. Our key
-              innovation lies in leveraging DDPMs for self-supervised pre-training in landmark detection, a
-              previously unexplored approach in this domain. This method enables accurate landmark detection
-              with minimal annotated training data (as few as 50 images), surpassing both ImageNet supervised
-              pre-training and traditional self-supervised techniques across three popular x-ray benchmark datasets.
-              To our knowledge, this work represents the first application of diffusion models for self-supervised
-              learning in landmark detection, which may offer a valuable pre-training approach in few-shot regimes,
-              for mitigating data scarcity.
+              This paper introduces a novel application of denoising diffusion probabilistic models (DDPMs) for anatomical landmark detection in X-ray images, specifically <b>addressing the challenge of limited annotated data</b>. The key innovation lies in leveraging <b>DDPMs for self-supervised pre-training in landmark detection</b>, a previously unexplored approach in this domain. The method enables accurate landmark detection with minimal annotated training data (as few as 1-50 images), significantly <b>outperforming both ImageNet supervised pre-training and traditional self-supervised techniques</b> across three popular X-ray benchmark datasets (Chest, Cephalometric, and Hand). A comprehensive evaluation against state-of-the-art alternatives, <b>including YOLO</b>, demonstrates the approach's effectiveness even when pre-trained on one in-domain dataset and fine-tuned on smaller, distinct datasets.
             </p>
           </div>
         </div>
       </div>
       <div class="columns is-centered">
         <div class="column">
-          <img src="static/images/ddpm_pipeline.png" alt="Our pipeline" style="width:100%" class="is-centered">
+          <img src="static/images/ddpm_pipeline.png" alt="Our pipeline" style="width:100%">
         </div>
       </div>
     </div>
@@ -208,30 +182,54 @@
 </section>
 
 
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-left">Few-shot Landmark Detection results</h2>
+
+<!-- Introduction + Pipeline-->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Few-shot Landmark Detection Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              The paper evaluates the effectiveness of DDPM self-supervised pre-training for landmark detection by <b>benchmarking it against supervised ImageNet pre-training, self-supervised state-of-the-art methods (MoCoV3, SimCLRV2, and DINO), and the YOLO framework</b> across three X-ray datasets: Chest, Cephalometric, and Hand. The proposed approach consistently outperforms both ImageNet and alternative SSL methods across all datasets and training image quantities, with particularly <b>impressive results</b> in low-data regimes. For instance, <b>with just one labeled sample</b> in the Chest dataset, DDPM achieves a Mean Radial Error (MRE) of 14.99px compared to ImageNet's 143.67px, representing an 89.6% improvement. Similar significant performance gains are observed in the Cephalometric dataset (15.71mm vs 86.71mm MRE) and Hand dataset (28.75mm vs 79.32mm MRE). When compared to YOLO, a state-of-the-art universal anatomical landmark detection model that uses mixed dataset training, DDPM achieves competitive or superior results using just one labeled sample. <b>These results demonstrate the method's effectiveness in few-shot learning scenarios, which are common in medical imaging where annotated data is scarce.</b>
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div class="columns is-centered">
-      <p>
-        We evaluate our method on three popular x-ray benchmark datasets: Chest, Cephalometric and Hand. We compare our method with ImageNet supervised pre-training and traditional self-supervised techniques. Our method outperforms both baselines across all datasets, demonstrating the effectiveness of our self-supervised pre-training approach.
-      </p>
         <div class="column">
+          <h3 class="title is-4">Chest Few-shot Results</h3>
           <img src="static/images/chest_label_efficient.png" alt="Chest few-shot results" style="width:100%">
         </div>
+      </div>
 
+      <div class="columns is-centered">
         <div class="column">
-          <img src="static/images/chest_label_efficient.png" alt="Chest few-shot results" style="width:100%">
+          <h3 class="title is-4">Cephalometric Few-shot Results</h3>
+          <img src="static/images/cephalo_label_efficient.png" alt="Cephalometric few-shot results" style="width:100%">
         </div>
+      </div>
 
+      <div class="columns is-centered">
         <div class="column">
-          <img src="static/images/chest_label_efficient.png" alt="Chest few-shot results" style="width:100%">
+          <h3 class="title is-4">Hand Few-shot Results</h3>
+          <img src="static/images/hand_label_efficient.png" alt="Hand few-shot results" style="width:100%">
         </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <h3 class="title is-4">Comparison with the state-of-the-art YOLO framework</h3>
+          <img src="static/images/sota_results.png" alt="Comparison with YOLO framework" style="width:100%">
+        </div>
+      </div>
 
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- Image carousel -->
 <!--
@@ -351,7 +349,7 @@
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
+      <h2 class="title">BibTeX Citation</h2>
       <pre><code>
         @article{DiVia2024,
           author = {Di Via, R. and Odone, F. and Pastore, V. P.},
@@ -361,6 +359,10 @@
           volume = {2407.18125},
           url = {https://arxiv.org/abs/2407.18125},
         }
+      </code></pre>
+      <h2 class="title">APA Citation</h2>
+      <pre><code>
+        Di Via, R., Odone, F., & Pastore, V. P. (2024). Self-supervised pre-training with diffusion model for few-shot landmark detection in x-ray images. ArXiv. https://arxiv.org/abs/2407.18125
       </code></pre>
     </div>
 </section>
